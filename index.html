@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equinoccio Sol & Energía | Prototipo TRL5</title>
+  <meta name="description" content="Prototipo funcional TRL5 para monitoreo inteligente de sistemas solares modulares en zonas rurales mediante simulación IoT." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-noise"></div>
+
+  <div class="app-frame">
+    <aside class="side-rail">
+      <div class="brand-block">
+        <div class="brand-logo" aria-hidden="true">
+          <span class="sun-core"></span>
+          <span class="sun-ray r1"></span><span class="sun-ray r2"></span><span class="sun-ray r3"></span><span class="sun-ray r4"></span>
+          <span class="leaf l1"></span><span class="leaf l2"></span>
+        </div>
+        <div>
+          <p class="kicker">TRL5 · IoT Energy Platform</p>
+          <h1>Equinoccio<br><span>Sol & Energía</span></h1>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-view="inicio"><span>⌂</span>Inicio</button>
+        <button class="nav-item" data-view="monitoreo"><span>▧</span>Monitoreo</button>
+        <button class="nav-item" data-view="alertas"><span>⚠</span>Alertas</button>
+        <button class="nav-item" data-view="nodos"><span>⌘</span>Nodos</button>
+        <button class="nav-item" data-view="analitica"><span>▥</span>Analítica</button>
+        <button class="nav-item" data-view="iot"><span>☁</span>IoT Lab</button>
+        <button class="nav-item" data-view="trl5"><span>◇</span>TRL5</button>
+      </nav>
+
+      <div class="rail-card">
+        <span class="rail-label">Estado general</span>
+        <div class="mini-ring" aria-label="Nivel de batería del sistema">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="48" class="ring-track"></circle>
+            <circle cx="60" cy="60" r="48" class="ring-value" id="batteryRing"></circle>
+          </svg>
+          <div class="mini-ring-center">
+            <strong id="batteryPercent">87%</strong>
+            <small>Batería</small>
+          </div>
+        </div>
+        <div class="rail-stats">
+          <div><small>Autonomía</small><strong id="railAutonomy">16 h</strong></div>
+          <div><small>Sync</small><strong id="railSync">Inicial</strong></div>
+        </div>
+      </div>
+
+      <div class="rail-footer">
+        <span>UNAD · Ingeniería de Sistemas</span>
+        <strong>Fase 4</strong>
+      </div>
+    </aside>
+
+    <main class="main-stage">
+      <header class="top-strip">
+        <div>
+          <p class="kicker" id="viewKicker">Prototipo funcional TRL5</p>
+          <h2 id="viewTitle">Presentación del proyecto</h2>
+        </div>
+        <div class="status-actions">
+          <span class="status-chip online"><i></i>Sincronizado</span>
+          <span class="status-chip"><i class="soft"></i><span id="clockLabel">Sync inicial</span></span>
+          <button class="ghost-btn" id="simulateBtn">Simular evento</button>
+        </div>
+      </header>
+
+      <section class="view active" id="inicio" data-title="Presentación del proyecto" data-kicker="Equinoccio Sol & Energía">
+        <div class="hero-layout">
+          <article class="hero-copy panel">
+            <p class="kicker">Monitoreo inteligente de sistemas solares modulares</p>
+            <h3>Plataforma web para energía solar rural, diseñada para decisión, mantenimiento y escala.</h3>
+            <p>Este prototipo funcional TRL5 integra dashboard energético, telemetría IoT simulada, alertas, nodos, analítica y validación funcional para apoyar la gestión de sistemas solares en zonas rurales.</p>
+            <div class="hero-actions">
+              <button class="primary-btn jump" data-target="monitoreo">Explorar dashboard →</button>
+              <button class="secondary-btn jump" data-target="nodos">Revisar nodos</button>
+            </div>
+          </article>
+
+          <article class="project-card panel">
+            <div class="project-top">
+              <span class="status-chip online"><i></i>Operativo</span>
+              <strong>Simulación IoT activa</strong>
+            </div>
+            <div class="project-metrics">
+              <div><span>Generación actual</span><strong id="homeGeneration">4.25 kWh</strong><small>+12% vs 24h</small></div>
+              <div><span>Consumo actual</span><strong id="homeConsumption">2.81 kWh</strong><small>+9% vs 24h</small></div>
+              <div><span>Nivel de batería</span><strong id="homeBattery">87%</strong><small>Autonomía estimada</small></div>
+            </div>
+            <div class="module-pills">
+              <span>Monitoreo</span><span>Alertas</span><span>Nodos</span><span>Analítica</span><span>IoT Lab</span><span>TRL5</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card panel"><span class="feature-icon">▧</span><strong>Monitoreo inteligente</strong><p>Visualización en tiempo real de generación, consumo, voltaje, batería y salud del sistema.</p></article>
+          <article class="feature-card panel"><span class="feature-icon yellow">⚠</span><strong>Alertas y trazabilidad</strong><p>Detección de eventos críticos y registro de incidencias operativas por nodo.</p></article>
+          <article class="feature-card panel"><span class="feature-icon">⌘</span><strong>Gestión de nodos</strong><p>Fichas técnicas con estado, diagnóstico, señal, temperatura y recomendación operativa.</p></article>
+          <article class="feature-card panel"><span class="feature-icon">▥</span><strong>Analítica energética</strong><p>Comparación de generación y demanda para apoyar decisiones de uso eficiente.</p></article>
+        </div>
+      </section>
+
+      <section class="view" id="monitoreo" data-title="Dashboard de monitoreo" data-kicker="Panel operativo">
+        <div class="section-tools">
+          <div>
+            <p class="kicker">Estado general del sistema</p>
+            <h3>Indicadores energéticos clave</h3>
+          </div>
+          <div class="tool-row">
+            <button class="secondary-btn" id="refreshBtn">Actualizar datos</button>
+            <button class="ghost-btn" id="exportBtn">Exportar reporte</button>
+          </div>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card panel"><span>Generación actual</span><strong id="metricGeneration">4.25 kWh</strong><small class="positive">↘ 12% vs 24h</small></article>
+          <article class="metric-card panel"><span>Consumo actual</span><strong id="metricConsumption">2.81 kWh</strong><small class="positive">↘ 9% vs 24h</small></article>
+          <article class="metric-card panel"><span>Nivel de batería</span><strong id="metricBattery">87%</strong><small id="metricAutonomy">Autonomía: 16 h</small></article>
+          <article class="metric-card panel"><span>Estado del sistema</span><strong id="metricState">Operativo</strong><small class="positive" id="metricHealthText">Normal</small></article>
+        </div>
+
+        <div class="dashboard-layout">
+          <article class="panel balance-card">
+            <p class="section-label">Balance energético instantáneo</p>
+            <strong id="balanceValue">+1.44 kWh</strong>
+            <span id="balanceLabel">Excedente</span>
+            <div class="progress-track"><div id="balanceBar"></div></div>
+            <div class="two-stat">
+              <div><small>Generación</small><strong id="balanceGen">4.25 kWh</strong></div>
+              <div><small>Consumo</small><strong id="balanceCon">2.81 kWh</strong></div>
+            </div>
+          </article>
+
+          <article class="panel chart-card">
+            <div class="card-head"><p class="section-label">Comportamiento 24h</p><span class="legend-dot">Solar</span><span class="legend-dot yellow">Consumo</span></div>
+            <canvas id="dailyChart" width="900" height="310" aria-label="Comportamiento energético de 24 horas"></canvas>
+          </article>
+
+          <article class="panel autonomy-card">
+            <p class="section-label">Autonomía estimada</p>
+            <div class="donut"><span id="autonomyValue">16 h</span><small>Tiempo estimado de operación</small></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="alertas" data-title="Centro de alertas" data-kicker="Respuesta operativa">
+        <div class="section-tools">
+          <div><p class="kicker">Eventos operativos</p><h3>Alertas, incidencias y trazabilidad</h3></div>
+          <button class="primary-btn" id="criticalBtn">Disparar alerta crítica</button>
+        </div>
+        <div class="split-layout">
+          <article class="panel">
+            <div class="card-head"><p class="section-label">Bandeja priorizada</p><span class="status-chip danger">Prioridad alta</span></div>
+            <div class="alert-list" id="alertsList"></div>
+          </article>
+          <article class="panel">
+            <p class="section-label">Registro de incidencia</p>
+            <form class="incident-form" id="incidentForm">
+              <label>Tipo de evento<select name="type"><option>Batería</option><option>Conectividad</option><option>Sensor IoT</option><option>Panel solar</option></select></label>
+              <label>Ubicación<input name="location" placeholder="Ej. Nodo B07 · La Guajira" required></label>
+              <label>Detalle<textarea name="detail" rows="5" placeholder="Describa brevemente la falla detectada" required></textarea></label>
+              <button class="primary-btn" type="submit">Registrar incidencia</button>
+            </form>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="nodos" data-title="Nodos y dispositivos" data-kicker="Supervisión técnica">
+        <div class="section-tools">
+          <div><p class="kicker">Mapa técnico simulado</p><h3>Estado operativo por nodo solar</h3></div>
+          <span class="status-chip online"><i></i>4 nodos monitoreados</span>
+        </div>
+        <div class="nodes-layout">
+          <article class="panel map-panel">
+            <p class="section-label">Cobertura geoespacial simulada</p>
+            <div class="map-sim" id="mapSim">
+              <button class="node-point" style="top:22%;left:18%" data-node="A12">A12</button>
+              <button class="node-point warning" style="top:40%;left:52%" data-node="B07">B07</button>
+              <button class="node-point" style="top:65%;left:72%" data-node="C19">C19</button>
+              <button class="node-point" style="top:72%;left:28%" data-node="D03">D03</button>
+            </div>
+          </article>
+          <article class="panel node-panel">
+            <p class="section-label">Inventario de nodos</p>
+            <div class="node-list" id="nodeList"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="analitica" data-title="Analítica energética" data-kicker="Panel administrador">
+        <div class="analytics-layout">
+          <article class="panel chart-card large">
+            <div class="card-head"><p class="section-label">Generación vs demanda</p><span class="status-chip">Últimos 7 días</span></div>
+            <canvas id="weeklyChart" width="900" height="310" aria-label="Comparativo semanal de generación y demanda"></canvas>
+          </article>
+          <article class="panel impact-card">
+            <p class="section-label">Beneficios proyectados</p>
+            <div class="impact-list">
+              <div><span>Reducción de costos</span><strong>40%</strong></div>
+              <div><span>Emisiones evitadas</span><strong id="co2Value">528 kg CO₂</strong></div>
+              <div><span>Disponibilidad</span><strong>99.2%</strong></div>
+              <div><span>Vida útil estimada</span><strong>&gt;10 años</strong></div>
+            </div>
+          </article>
+          <article class="panel priorities-card">
+            <p class="section-label">Matriz de prioridad operativa</p>
+            <div class="priority-grid">
+              <div class="priority success">Alta radiación: habilitar carga productiva.</div>
+              <div class="priority warning">Batería &lt; 30%: restringir carga no crítica.</div>
+              <div class="priority blue">Latencia de sensor: revisar gateway.</div>
+              <div class="priority">Consumo nocturno bajo: operación estable.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="iot" data-title="IoT Lab" data-kicker="Telemetría simulada">
+        <div class="iot-layout">
+          <article class="panel pipeline-card">
+            <p class="section-label">Ruta de datos</p>
+            <div class="pipeline"><span>Sensor</span><i>→</i><span>Gateway</span><i>→</i><span>API</span><i>→</i><span>Dashboard</span></div>
+            <div class="terminal" id="telemetryFeed"></div>
+          </article>
+          <article class="panel sensor-panel">
+            <div class="card-head"><p class="section-label">Variables en streaming</p><button class="ghost-btn small" id="toggleFeedBtn">Pausar feed</button></div>
+            <div class="sensor-grid" id="sensorGrid"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="trl5" data-title="Validación funcional TRL5" data-kicker="Evidencia académica">
+        <div class="trl-layout">
+          <article class="panel trl-card">
+            <div class="card-head"><p class="section-label">Madurez tecnológica</p><span class="status-chip online"><i></i>Validado</span></div>
+            <h3>Justificación TRL5</h3>
+            <p>El prototipo integra los componentes principales de la solución en un entorno relevante simulado: interfaz web, telemetría IoT simulada, dashboard, alertas, nodos, analítica, exportación de reporte y pruebas funcionales.</p>
+            <div class="trl-steps"><span>1<br><small>Simulación IoT</small></span><span>2<br><small>Indicadores</small></span><span>3<br><small>Alertas</small></span><span>4<br><small>Validación</small></span></div>
+          </article>
+          <article class="panel trl-card">
+            <p class="section-label">Resultado de validación</p>
+            <h3>Alcance funcional aprobado</h3>
+            <ul class="check-list">
+              <li>Prototipo navegable en HTML, CSS y JavaScript.</li>
+              <li>Simulación de telemetría energética.</li>
+              <li>Alertas, incidencias y visualización de nodos.</li>
+              <li>Ficha técnica operativa por nodo.</li>
+              <li>Matriz de pruebas funcionales documentada.</li>
+              <li>Exportación de reporte JSON.</li>
+            </ul>
+          </article>
+          <article class="panel test-card">
+            <p class="section-label">Matriz resumida de pruebas</p>
+            <div class="test-grid">
+              <span>PF-01 Navegación · Aprobado</span><span>PF-02 Dashboard · Aprobado</span><span>PF-03 Simulación · Aprobado</span><span>PF-04 Alertas · Aprobado</span><span>PF-05 Incidencias · Aprobado</span><span>PF-06 Nodos · Aprobado</span><span>PF-07 Ficha técnica · Aprobado</span><span>PF-08 Reporte JSON · Aprobado</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="nodeModal" aria-hidden="true">
+    <div class="modal-scrim" data-close="modal"></div>
+    <article class="modal-card panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close="modal" aria-label="Cerrar ficha técnica">×</button>
+      <div class="modal-head">
+        <div><p class="kicker">Ficha técnica operativa</p><h3 id="modalTitle">Nodo</h3><span id="modalLocation"></span></div>
+        <span class="status-chip" id="modalStatus">Operativo</span>
+      </div>
+      <div class="modal-metrics" id="modalMetrics"></div>
+      <div class="modal-sections">
+        <section><p class="section-label">Diagnóstico</p><p id="modalDiagnosis"></p></section>
+        <section><p class="section-label">Recomendación</p><p id="modalAction"></p></section>
+        <section><p class="section-label">Historial reciente</p><ul id="modalHistory"></ul></section>
+      </div>
+    </article>
+  </div>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
