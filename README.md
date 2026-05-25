@@ -1,10 +1,10 @@
 # Equinoccio Sol & Energía — Prototipo funcional TRL5
 
-Prototipo web de alta fidelidad para el monitoreo inteligente de sistemas solares modulares en zonas rurales colombianas. La solución simula telemetría IoT y permite visualizar indicadores energéticos, alertas operativas, nodos solares, analítica y evidencia de validación funcional TRL5.
+Prototipo web de alta fidelidad para el monitoreo inteligente de sistemas solares modulares en zonas rurales colombianas. La solución simula telemetría IoT y permite visualizar indicadores energéticos, alertas operativas, nodos solares, analítica, validación investigativa, evidencia documental y soporte para sustentación de Fase 5.
 
 ## Objetivo
 
-Demostrar, en entorno simulado, una solución informática orientada a apoyar la gestión operativa de sistemas solares modulares mediante tablero de control, alertas tempranas, fichas técnicas por nodo y trazabilidad básica de eventos.
+Demostrar, en entorno simulado, una solución informática orientada a apoyar la gestión operativa de sistemas solares modulares mediante tablero de control, alertas tempranas, fichas técnicas por nodo, trazabilidad básica de eventos, validación piloto académica y evidencia funcional asociada al nivel TRL5.
 
 ## Tecnologías
 
@@ -12,7 +12,8 @@ Demostrar, en entorno simulado, una solución informática orientada a apoyar la
 - CSS3 responsivo
 - JavaScript vanilla
 - Canvas API para gráficas
-- Ejecución local o publicación en GitHub Pages
+- GitHub y GitHub Pages
+- Ejecución local o publicación web estática
 
 ## Funcionalidades principales
 
@@ -23,9 +24,17 @@ Demostrar, en entorno simulado, una solución informática orientada a apoyar la
 5. Registro de incidencias operativas.
 6. Vista de nodos solares simulados con ficha técnica ampliada por nodo.
 7. Analítica semanal de generación vs demanda.
-8. IoT Lab con ruta de datos Sensor → Gateway → API → Dashboard.
-9. Sección de validación TRL5 con matriz resumida de pruebas.
-10. Exportación de reporte operativo en formato JSON.
+8. Sección de investigación con muestra de 20 participantes, tabulación, diagnóstico y relación con requerimientos.
+9. IoT Lab con ruta de datos Sensor → Gateway → API → Dashboard.
+10. Sección TRL5 con matriz resumida de pruebas.
+11. Sección de evidencias para Fase 5: GitHub, GitHub Pages, video, plan de pruebas, guion y artículo IEEE.
+12. Exportación de reporte operativo en formato JSON.
+
+## Enlaces principales
+
+- Repositorio GitHub: https://github.com/omarcupritra-web/equinoccio-sol-energia-trl5
+- Prototipo publicado: https://omarcupritra-web.github.io/equinoccio-sol-energia-trl5/
+- Video demostrativo: https://youtu.be/KGusOUIP1GE
 
 ## Cómo ejecutar
 
@@ -59,22 +68,20 @@ equinoccio-sol-energia-trl5/
 ├── README.txt
 ├── .nojekyll
 └── doc/
+    ├── ARTICULO_IEEE_BORRADOR.md
+    ├── EVIDENCIAS_FASE5.md
     ├── GUION_VIDEO.md
+    ├── MATRIZ_VALIDACION_PILOTO.csv
     └── PLAN_PRUEBAS.md
 ```
 
 ## Relación con TRL5
 
-El prototipo se clasifica como TRL5 académico porque integra los componentes principales de la solución en un entorno relevante simulado: interfaz web, reglas de alertas, visualización energética, simulación de telemetría IoT, gestión de nodos, historial básico de eventos y pruebas funcionales documentadas.
+El prototipo se clasifica como TRL5 académico porque integra los componentes principales de la solución en un entorno relevante simulado: interfaz web, reglas de alertas, visualización energética, simulación de telemetría IoT, gestión de nodos, historial básico de eventos, evidencia investigativa piloto, pruebas funcionales documentadas y despliegue público.
 
-## Despliegue sugerido en GitHub Pages
+## Alcance académico
 
-1. Crear o abrir el repositorio en GitHub.
-2. Subir todos los archivos de esta carpeta en la raíz del repositorio.
-3. Entrar a `Settings > Pages`.
-4. Seleccionar `Deploy from a branch`.
-5. Seleccionar rama `main` y carpeta `/root`.
-6. Guardar y copiar el enlace público generado.
+La validación usa datos simulados y un consolidado piloto académico anonimizado. No se afirma conexión con hardware físico real ni aplicación de campo definitiva. El objetivo es demostrar integración funcional y preparación para una futura evolución con sensores, backend, base de datos e implementación rural real.
 
 ## Autor académico
 
