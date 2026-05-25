@@ -334,7 +334,7 @@ function addTelemetryLine() {
 function buildReport() {
   return {
     proyecto: 'Equinoccio Sol & Energía',
-    version: 'TRL5-academico-ui-2.0',
+    version: 'TRL5-academico-fase5-3.0',
     fechaGeneracion: new Date().toISOString(),
     resumen: {
       generacionKwh: Number(state.generation.toFixed(2)),
@@ -347,7 +347,18 @@ function buildReport() {
       saludSistema: state.health,
     },
     nodos: nodes.map((node) => ({ id: node.id, estado: node.status, bateria: node.battery, senal: node.signal, prioridad: node.priority })),
-    pruebasFuncionales: ['Navegación', 'Dashboard', 'Alertas', 'Nodos con ficha técnica', 'IoT Lab', 'Exportación JSON'],
+    pruebasFuncionales: ['Navegación', 'Dashboard', 'Alertas', 'Nodos con ficha técnica', 'Analítica', 'Investigación piloto', 'IoT Lab', 'TRL5', 'Evidencias Fase 5', 'Exportación JSON'],
+    validacionPiloto: {
+      participantes: 20,
+      tipo: 'Consolidado académico anonimizado',
+      prioridades: ['Visualización de batería', 'Alertas tempranas', 'Panel integrado', 'Acceso móvil', 'Historial de consumo']
+    },
+    evidencias: {
+      github: 'https://github.com/omarcupritra-web/equinoccio-sol-energia-trl5',
+      pages: 'https://omarcupritra-web.github.io/equinoccio-sol-energia-trl5/',
+      video: 'https://youtu.be/KGusOUIP1GE',
+      articuloIEEE: 'doc/ARTICULO_IEEE_BORRADOR.md'
+    },
   };
 }
 
