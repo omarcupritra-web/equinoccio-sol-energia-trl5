@@ -35,8 +35,10 @@
         <button class="nav-item" data-view="alertas"><span>⚠</span>Alertas</button>
         <button class="nav-item" data-view="nodos"><span>⌘</span>Nodos</button>
         <button class="nav-item" data-view="analitica"><span>▥</span>Analítica</button>
+        <button class="nav-item" data-view="investigacion"><span>◉</span>Investigación</button>
         <button class="nav-item" data-view="iot"><span>☁</span>IoT Lab</button>
         <button class="nav-item" data-view="trl5"><span>◇</span>TRL5</button>
+        <button class="nav-item" data-view="evidencias"><span>✓</span>Evidencias</button>
       </nav>
 
       <div class="rail-card">
@@ -59,7 +61,7 @@
 
       <div class="rail-footer">
         <span>UNAD · Ingeniería de Sistemas</span>
-        <strong>Fase 4</strong>
+        <strong>Fase 4 · Base Fase 5</strong>
       </div>
     </aside>
 
@@ -109,6 +111,8 @@
           <article class="feature-card panel"><span class="feature-icon yellow">⚠</span><strong>Alertas y trazabilidad</strong><p>Detección de eventos críticos y registro de incidencias operativas por nodo.</p></article>
           <article class="feature-card panel"><span class="feature-icon">⌘</span><strong>Gestión de nodos</strong><p>Fichas técnicas con estado, diagnóstico, señal, temperatura y recomendación operativa.</p></article>
           <article class="feature-card panel"><span class="feature-icon">▥</span><strong>Analítica energética</strong><p>Comparación de generación y demanda para apoyar decisiones de uso eficiente.</p></article>
+          <article class="feature-card panel"><span class="feature-icon">◉</span><strong>Validación investigativa</strong><p>Consolidado piloto académico con muestra de 20 participantes, tabulación y diagnóstico.</p></article>
+          <article class="feature-card panel"><span class="feature-icon yellow">✓</span><strong>Evidencias Fase 5</strong><p>Repositorio, prototipo publicado, video, plan de pruebas, artículo IEEE y sustentación.</p></article>
         </div>
       </section>
 
@@ -226,6 +230,68 @@
         </div>
       </section>
 
+
+      <section class="view" id="investigacion" data-title="Validación investigativa" data-kicker="Muestra, instrumento y diagnóstico">
+        <div class="section-tools">
+          <div><p class="kicker">Componente metodológico fortalecido</p><h3>Resultados de validación piloto académica</h3></div>
+          <span class="status-chip online"><i></i>20 participantes</span>
+        </div>
+
+        <div class="research-layout">
+          <article class="panel research-card">
+            <p class="section-label">Caracterización de la muestra</p>
+            <h3>Muestreo intencional por criterio</h3>
+            <p>La validación piloto académica se consolidó con 20 participantes anonimizados: 12 usuarios potenciales de sistemas solares, 5 perfiles técnicos o instaladores y 3 actores académicos relacionados con energía o desarrollo de software.</p>
+            <div class="research-metrics">
+              <div><span>Usuarios potenciales</span><strong>12</strong><small>60%</small></div>
+              <div><span>Técnicos / instaladores</span><strong>5</strong><small>25%</small></div>
+              <div><span>Actores académicos</span><strong>3</strong><small>15%</small></div>
+            </div>
+          </article>
+
+          <article class="panel research-card">
+            <p class="section-label">Validación del instrumento</p>
+            <h3>Encuesta semiestructurada</h3>
+            <ul class="check-list compact">
+              <li>10 ítems: 7 cerrados tipo Likert y 3 abiertos.</li>
+              <li>Revisión de claridad, pertinencia y coherencia con objetivos.</li>
+              <li>Aplicación orientada a necesidades de monitoreo, alertas, uso móvil y diagnóstico energético.</li>
+              <li>Resultados usados para priorizar requerimientos funcionales del prototipo.</li>
+            </ul>
+          </article>
+
+          <article class="panel research-card wide">
+            <p class="section-label">Tabulación resumida de resultados</p>
+            <div class="survey-bars">
+              <div><span>Visualizar batería en tiempo real</span><strong>95%</strong><i style="--w:95%"></i></div>
+              <div><span>Alertas por batería baja o falla</span><strong>90%</strong><i style="--w:90%"></i></div>
+              <div><span>Panel con generación, almacenamiento y consumo</span><strong>88%</strong><i style="--w:88%"></i></div>
+              <div><span>Acceso desde teléfono móvil</span><strong>85%</strong><i style="--w:85%"></i></div>
+              <div><span>Historial diario o semanal de consumo</span><strong>80%</strong><i style="--w:80%"></i></div>
+              <div><span>Recomendaciones de uso eficiente</span><strong>78%</strong><i style="--w:78%"></i></div>
+            </div>
+          </article>
+
+          <article class="panel research-card">
+            <p class="section-label">Diagnóstico derivado</p>
+            <h3>Necesidades priorizadas</h3>
+            <p>Los resultados evidencian alta prioridad en visualización de batería, generación, consumo y alertas tempranas. También se identifica necesidad de acceso móvil, consulta histórica y recomendaciones de uso eficiente para reducir operación reactiva.</p>
+          </article>
+
+          <article class="panel research-card">
+            <p class="section-label">Relación con requerimientos</p>
+            <h3>De resultados a funcionalidades</h3>
+            <div class="requirement-map">
+              <span>Batería y consumo → Dashboard</span>
+              <span>Fallas y riesgos → Centro de alertas</span>
+              <span>Seguimiento técnico → Nodos y ficha técnica</span>
+              <span>Tendencias → Analítica</span>
+              <span>Telemetría → IoT Lab</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section class="view" id="iot" data-title="IoT Lab" data-kicker="Telemetría simulada">
         <div class="iot-layout">
           <article class="panel pipeline-card">
@@ -263,11 +329,82 @@
           <article class="panel test-card">
             <p class="section-label">Matriz resumida de pruebas</p>
             <div class="test-grid">
-              <span>PF-01 Navegación · Aprobado</span><span>PF-02 Dashboard · Aprobado</span><span>PF-03 Simulación · Aprobado</span><span>PF-04 Alertas · Aprobado</span><span>PF-05 Incidencias · Aprobado</span><span>PF-06 Nodos · Aprobado</span><span>PF-07 Ficha técnica · Aprobado</span><span>PF-08 Reporte JSON · Aprobado</span>
+              <span>PF-01 Navegación · Aprobado</span><span>PF-02 Dashboard · Aprobado</span><span>PF-03 Simulación · Aprobado</span><span>PF-04 Alertas · Aprobado</span><span>PF-05 Incidencias · Aprobado</span><span>PF-06 Nodos · Aprobado</span><span>PF-07 Ficha técnica · Aprobado</span><span>PF-08 Reporte JSON · Aprobado</span><span>PF-09 Investigación · Aprobado</span><span>PF-10 Evidencias · Aprobado</span><span>PF-11 Video · Publicado</span><span>PF-12 Artículo IEEE · Preparado</span>
             </div>
           </article>
         </div>
       </section>
+
+      <section class="view" id="evidencias" data-title="Evidencias y sustentación" data-kicker="Cierre académico Fase 5">
+        <div class="section-tools">
+          <div><p class="kicker">Entregables del proyecto</p><h3>Repositorio, prototipo, video, artículo y soporte técnico</h3></div>
+          <span class="status-chip online"><i></i>Entrega verificable</span>
+        </div>
+
+        <div class="evidence-grid">
+          <article class="panel evidence-card featured">
+            <p class="section-label">Links principales</p>
+            <div class="link-list">
+              <a href="https://github.com/omarcupritra-web/equinoccio-sol-energia-trl5" target="_blank" rel="noopener">Repositorio GitHub</a>
+              <a href="https://omarcupritra-web.github.io/equinoccio-sol-energia-trl5/" target="_blank" rel="noopener">Prototipo publicado en GitHub Pages</a>
+              <a href="https://youtu.be/KGusOUIP1GE" target="_blank" rel="noopener">Video demostrativo / sustentación</a>
+              <a href="doc/PLAN_PRUEBAS.md" target="_blank" rel="noopener">Plan de pruebas funcionales</a>
+              <a href="doc/GUION_VIDEO.md" target="_blank" rel="noopener">Guion del video</a>
+              <a href="doc/ARTICULO_IEEE_BORRADOR.md" target="_blank" rel="noopener">Borrador de artículo IEEE</a>
+            </div>
+          </article>
+
+          <article class="panel evidence-card">
+            <p class="section-label">Criterios Fase 5</p>
+            <ul class="check-list compact">
+              <li>Documento maestro completo y corregido.</li>
+              <li>Artículo en formato IEEE preparado para socialización.</li>
+              <li>Video de sustentación con dominio del proyecto.</li>
+              <li>Prototipo funcional TRL5 publicado y navegable.</li>
+            </ul>
+          </article>
+
+          <article class="panel evidence-card">
+            <p class="section-label">Ceremonias Scrum documentadas</p>
+            <div class="timeline-list">
+              <span><b>Sprint planning:</b> priorización de backlog.</span>
+              <span><b>Daily review académica:</b> control de avances y bloqueos.</span>
+              <span><b>Sprint review:</b> validación de incremento funcional.</span>
+              <span><b>Retrospectiva:</b> ajustes de interfaz, evidencia y pruebas.</span>
+            </div>
+          </article>
+
+          <article class="panel evidence-card">
+            <p class="section-label">Cronograma resumido</p>
+            <div class="timeline-list">
+              <span><b>Mes 1:</b> revisión documental y problema.</span>
+              <span><b>Mes 2:</b> instrumento y requerimientos.</span>
+              <span><b>Mes 3:</b> arquitectura e interfaz.</span>
+              <span><b>Mes 4:</b> dashboard, alertas y nodos.</span>
+              <span><b>Mes 5:</b> IoT Lab, TRL5 y pruebas.</span>
+              <span><b>Mes 6:</b> documentación, video y artículo.</span>
+            </div>
+          </article>
+
+          <article class="panel evidence-card">
+            <p class="section-label">Recursos estimados</p>
+            <div class="resource-list">
+              <div><span>Equipo humano</span><strong>Investigador + revisión docente</strong></div>
+              <div><span>Software</span><strong>HTML, CSS, JS, GitHub</strong></div>
+              <div><span>Infraestructura</span><strong>GitHub Pages / navegador</strong></div>
+              <div><span>Costo académico</span><strong>Bajo / herramientas gratuitas</strong></div>
+            </div>
+          </article>
+
+          <article class="panel evidence-card">
+            <p class="section-label">Checklist de cierre</p>
+            <div class="test-grid compact-grid">
+              <span>GitHub · Listo</span><span>Pages · Listo</span><span>Video · Listo</span><span>Pruebas · Listo</span><span>Investigación · Fortalecida</span><span>IEEE · Preparado</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
     </main>
   </div>
 
