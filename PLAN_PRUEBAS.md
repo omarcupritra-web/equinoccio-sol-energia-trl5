@@ -41,10 +41,13 @@ Las pruebas se realizan sobre un prototipo desarrollado en HTML, CSS y JavaScrip
 | PF-13 | Exportación de reporte | Presionar “Exportar reporte” | Se descarga un archivo JSON con estado operativo, alertas y nodos monitoreados | Aprobado |
 | PF-14 | Responsividad | Abrir el prototipo en escritorio y pantalla reducida | La interfaz se adapta conservando navegación y lectura de información | Aprobado |
 | PF-15 | Validación TRL5 | Revisar la sección TRL5 | Se presenta justificación de madurez tecnológica, alcance funcional y evidencia de pruebas | Aprobado |
+| PF-16 | Validación investigativa | Abrir la sección Investigación | Se muestra muestra de 20 participantes, tabulación, diagnóstico y relación con requerimientos | Aprobado |
+| PF-17 | Evidencias Fase 5 | Abrir la sección Evidencias | Se muestran enlaces a GitHub, GitHub Pages, video, plan de pruebas, guion y artículo IEEE | Aprobado |
+| PF-18 | Sustento IEEE | Abrir el documento ARTICULO_IEEE_BORRADOR.md | Se evidencia estructura preliminar del artículo en formato IEEE | Aprobado |
 
 ## 5. Resultados obtenidos
 
-Las pruebas funcionales permitieron verificar que el prototipo cumple con los módulos principales definidos para la solución: visualización de indicadores energéticos, simulación de variables IoT, generación de alertas operativas, registro de incidencias, consulta de nodos simulados, fichas técnicas por nodo, análisis de generación y demanda, exportación de reporte operativo y presentación de evidencia de validación funcional.
+Las pruebas funcionales permitieron verificar que el prototipo cumple con los módulos principales definidos para la solución: visualización de indicadores energéticos, simulación de variables IoT, generación de alertas operativas, registro de incidencias, consulta de nodos simulados, fichas técnicas por nodo, análisis de generación y demanda, validación investigativa piloto, sección de evidencias Fase 5, exportación de reporte operativo y presentación de evidencia de validación funcional.
 
 ## 6. Relación con TRL5
 
@@ -60,4 +63,4 @@ El prototipo se considera alineado con TRL5 académico porque integra los compon
 
 ## 8. Conclusión del plan de pruebas
 
-El prototipo Equinoccio Sol & Energía superó las pruebas funcionales definidas para la Fase 4. La solución demuestra una integración funcional de monitoreo energético, telemetría simulada, alertas, nodos, fichas técnicas, analítica y evidencia de validación, cumpliendo con el enfoque de prototipo funcional TRL5 en ambiente simulado.
+El prototipo Equinoccio Sol & Energía superó las pruebas funcionales definidas para la Fase 4. La solución demuestra una integración funcional de monitoreo energético, telemetría simulada, alertas, nodos, fichas técnicas, analítica, validación investigativa, evidencias para sustentación y validación TRL5, cumpliendo con el enfoque de prototipo funcional en ambiente simulado.

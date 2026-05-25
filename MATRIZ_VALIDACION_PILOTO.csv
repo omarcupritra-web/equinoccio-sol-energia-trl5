@@ -1,0 +1,21 @@
+Participante,Perfil,Interrupciones_Energia,Visualizar_Bateria,Alertas_Bateria_Falla,Historial_Consumo,Panel_Integrado,Acceso_Movil,Recomendaciones,Falla_Notificar,Impacto_Falta_Info,Funcionalidades_Prioritarias
+P01,Usuario potencial,4,5,5,4,5,5,4,Batería baja,Afectó iluminación nocturna,Alertas y batería
+P02,Usuario potencial,3,5,4,4,5,5,4,Sobrecarga,Limitó carga de celular,Consumo y recomendaciones
+P03,Usuario potencial,5,5,5,5,5,4,5,Falla de panel,Interrumpió actividad productiva,Historial y alertas
+P04,Usuario potencial,4,5,5,4,4,5,4,Batería baja,No supo priorizar cargas,Batería y consumo
+P05,Usuario potencial,3,4,5,4,5,5,4,Corte de energía,Afectó conectividad,Dashboard y móvil
+P06,Usuario potencial,4,5,5,3,5,4,4,Voltaje bajo,Daño de equipo pequeño,Alertas y nodos
+P07,Usuario potencial,5,5,5,5,5,5,5,Batería crítica,Pérdida de refrigeración,Alertas y recomendaciones
+P08,Usuario potencial,4,5,4,4,4,5,4,Sensor sin datos,No identificó consumo alto,Historial y consumo
+P09,Usuario potencial,3,4,5,4,5,5,3,Falla de carga,Demora en mantenimiento,Alertas y soporte
+P10,Usuario potencial,4,5,5,5,5,4,4,Panel desconectado,Apagón parcial,Dashboard y alertas
+P11,Usuario potencial,3,5,4,4,5,5,4,Temperatura alta,Incertidumbre de autonomía,Batería y móvil
+P12,Usuario potencial,4,5,5,4,5,5,5,Batería baja,Afectó estudio nocturno,Alertas y recomendaciones
+P13,Técnico,3,5,5,5,5,4,4,Falla de controlador,Demora diagnóstico,Ficha técnica y nodos
+P14,Técnico,4,5,5,4,5,4,5,Voltaje anómalo,Mantenimiento reactivo,Telemetría y alertas
+P15,Técnico,3,4,5,5,5,4,4,Conectividad,Sin trazabilidad,Historial y nodos
+P16,Técnico,4,5,5,4,5,5,4,Batería crítica,Visita técnica tardía,Alertas y reporte
+P17,Técnico,3,5,4,4,4,5,4,Sensor fuera de línea,Falta de diagnóstico remoto,Nodos y telemetría
+P18,Académico,3,5,5,5,5,5,5,Datos inconsistentes,No aplica,Analítica y validación
+P19,Académico,4,5,5,4,5,4,5,Sobrecarga,No aplica,Dashboard y TRL5
+P20,Académico,3,4,5,4,5,5,4,Error de lectura,No aplica,Reporte y pruebas
